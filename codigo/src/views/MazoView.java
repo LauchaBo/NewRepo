@@ -1,44 +1,32 @@
-package negocio;
+package views;
 
 import java.util.ArrayList;
 
-import views.MazoView;
+import negocio.Carta;
 
-public class Mazo {
-	private ArrayList<Carta> cartasMazo;
+public class MazoView {
+	ArrayList<CartaView> cartasMazo;
 	private int cantidad;
 	
-
+	//--------------------------------------------------------------------------------------------------//
+	//										//Constructor//													//
+	//--------------------------------------------------------------------------------------------------//
+	public MazoView (ArrayList<Carta> cartas, int cantidad) {
+		for (Carta carta:cartas) {
+			CartaView cv=carta.getView();
+			this.cartasMazo.add(cv);
+		}
+		this.cantidad=cantidad;
+	}
+	
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//
 	//--------------------------------------------------------------------------------------------------//
 	
-	public Mazo() {
-		
-	}
-
-	//--------------------------------------------------------------------------------------------------//
-	//										//Metodos//													//
-	//--------------------------------------------------------------------------------------------------//
-
-	public ArrayList<Carta> getCartasMazo() {
+	public ArrayList<CartaView>getMazoView() {
 		return cartasMazo;
 	}
-	public void setCartasMazo(ArrayList<Carta> cartasMazo) {
-		this.cartasMazo = cartasMazo;
-	}
-
 	public int getCantidad() {
 		return cantidad;
 	}
-
-
-	public void setCantidad(int cantidad) {
-		this.cantidad = cantidad;
-	}
-	public MazoView getView() {
-		MazoView mazoView=new MazoView(cartasMazo, cantidad);
-		return mazoView;
-	}
-
 }

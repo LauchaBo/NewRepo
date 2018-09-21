@@ -1,5 +1,7 @@
 package negocio;
 
+import views.JugadaView;
+
 public class Jugada {
 	private Carta carta;
 	private Jugador jugador;
@@ -34,7 +36,10 @@ public class Jugada {
 	public int rankingJugada() {
 		return this.carta.getRanking();
 	}
-	
+	public JugadaView getView() {
+		JugadaView jugadaView=new JugadaView(carta,jugador);
+		return jugadaView;
+	}
 	
 
 }

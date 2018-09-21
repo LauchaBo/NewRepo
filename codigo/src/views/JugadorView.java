@@ -1,44 +1,32 @@
-package negocio;
+package views;
 
-import views.JugadorView;
+import negocio.CartasEnMano;
+import negocio.Usuario;
 
-public class Jugador {
-	private CartasEnMano mano;
-	private Usuario jugador;
+public class JugadorView {
+	private UsuarioView jugador;
+	private CartasEnManoView mano;
 	private int orden;
 	
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//
 	//--------------------------------------------------------------------------------------------------//
-
-	
+	public JugadorView(CartasEnMano mano, Usuario jugador, int orden) {
+		this.jugador=jugador.getView();
+		this.mano=mano.getView();
+		this.orden=orden;
+	}
 	//--------------------------------------------------------------------------------------------------//
 	//										//Metodos//													//
 	//--------------------------------------------------------------------------------------------------//
-	public CartasEnMano getMano() {
-		return mano;
-	}
-	public void setMano(CartasEnMano mano) {
-		this.mano = mano;
-	}
-	public Usuario getJugador() {
+	public UsuarioView getJugador() {
 		return jugador;
 	}
-	public void setJugador(Usuario jugador) {
-		this.jugador = jugador;
+	public CartasEnManoView getCartasManoView() {
+		return mano;
 	}
 	public int getOrden() {
 		return orden;
 	}
-	public void setOrden(int orden) {
-		this.orden = orden;
-	}
-	public void terminarTurno() {
-		
-	}
-	public JugadorView getView() {
-		JugadorView jugadorView=new JugadorView(mano,jugador,orden);
-		return jugadorView;
-	}
-	
+
 }

@@ -1,4 +1,5 @@
 package negocio;
+import views.UsuarioView;
 
 public class Usuario {
 	private String apodo;
@@ -132,6 +133,10 @@ public class Usuario {
 	public void logOut() {
 		this.online=false;
 		//cerrar partidas?
+	}
+	public UsuarioView getView() {
+		UsuarioView usuarioView=new UsuarioView(apodo, mail, puntos, idUsuario, categoria, partidasJugadas, partidasGanadas, online, promedio, nroRanking);
+		return usuarioView;
 	}
 	public void save() {
 		

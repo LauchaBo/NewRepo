@@ -2,13 +2,15 @@ package negocio;
 
 import java.util.ArrayList;
 
+import views.BazaView;
+
 public class Baza {
 	private int idBaza;
 	private int turno;
 	private ArrayList<Jugada> jugadas;
 
 	//--------------------------------------------------------------------------------------------------//
-	//										//Constructor//													//
+	//										//Constructor//												//
 	//--------------------------------------------------------------------------------------------------//
 
 	public Baza() {
@@ -63,7 +65,8 @@ public class Baza {
 		this.jugadas.add(jugada);
 	}
 	public BazaView getView() {
-		
+		BazaView bazaView=new BazaView(idBaza,turno,jugadas);
+		return bazaView;
 	}
 
 }

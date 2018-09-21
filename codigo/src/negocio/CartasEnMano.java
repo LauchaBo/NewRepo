@@ -2,13 +2,12 @@ package negocio;
 
 import java.util.ArrayList;
 
+import views.CartasEnManoView;
+
 public class CartasEnMano {
 	private ArrayList<Carta> cartasEnMano;
 	private int cantCartas;
 	private int envido;
-	public ArrayList<Carta> getCartasEnMano() {
-		return cartasEnMano;
-	}
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//												//
 	//--------------------------------------------------------------------------------------------------//
@@ -34,10 +33,11 @@ public class CartasEnMano {
 		this.envido = envido;
 	}
 	public void jugarCarta(int numero, String palo){
-		
+		//---------//
 	}
 	public CartasEnManoView getView() {
-		
+		CartasEnManoView cartasEnManoView=new CartasEnManoView(cartasEnMano,cantCartas,envido);
+		return cartasEnManoView;
 	}
 
 }
