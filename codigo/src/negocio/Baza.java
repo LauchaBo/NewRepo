@@ -15,7 +15,7 @@ public class Baza {
 
 	public Baza() {
 		//this.idBaza=
-		//this.turno=
+		this.turno=0;
 		this.setJugadas(new ArrayList<Jugada>());
 	}
 
@@ -48,17 +48,18 @@ public class Baza {
 	}
 	
 	public void calcularEnvido() {
-		//
+		
 	}
 	public void calcularGanador() {
 		Jugada mejorJugada = null; 
 		for (Jugada jug: jugadas) {  // Recorro todas las jugadas y saco la de mejor ranking
 			if (mejorJugada==null)
 				mejorJugada=jug;
-			else if (jug.rankingJugada<mejorJugada.rankingJugada)
+			else if (jug.rankingJugada()<mejorJugada.rankingJugada())
 				mejorJugada=jug;
-			else if () // falta el caso en el que las cartas tienen el mismo ranking
-		}				// si no me eequivoco pasa el que es mano
+			else if (jug.rankingJugada()==mejorJugada.rankingJugada())
+				;//gana el jugador mano. Cómo accedemos a Mano?
+		}
 	}
 	public void jugarCarta (Carta carta, Jugador jugador) {
 		Jugada jugada= new Jugada(jugador, carta);
