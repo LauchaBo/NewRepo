@@ -52,7 +52,25 @@ public class SistemaUsuarios {
 		else {
 			Usuario user = null;
 //			try {
-//				user = UsuarioDao.getInstace().buscarUsuario(usuario);
+//				user = UsuarioDao.getInstace().buscarUsuario(apodo);
+//			} catch (ConnectionException | UsuarioException e) {
+//				e.printStackTrace();
+//			}
+			return user;
+		}
+	}
+	
+	public Usuario buscarUsuario(int idUsuario) {
+		int i=0;
+		while(i<this.usuarios.size() && !this.usuarios.get(i).sosUsuario(idUsuario)) {
+			i++;
+		}
+		if (i<this.usuarios.size())
+			return this.usuarios.get(i);
+		else {
+			Usuario user = null;
+//			try {
+//				user = UsuarioDao.getInstace().buscarUsuario(idUsuario);
 //			} catch (ConnectionException | UsuarioException e) {
 //				e.printStackTrace();
 //			}
