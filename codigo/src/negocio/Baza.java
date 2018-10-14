@@ -50,22 +50,24 @@ public class Baza {
 	public void calcularEnvido() {
 		//
 	}
-	public void calcularGanador() {
+	public void calcularGanador(Jugador jugadorMano) {
 		Jugada mejorJugada = null; 
 		for (Jugada jug: jugadas) {  // Recorro todas las jugadas y saco la de mejor ranking
 			if (mejorJugada==null)
 				mejorJugada=jug;
-			else if (jug.rankingJugada<mejorJugada.rankingJugada)
+			else if (jug.rankingJugada()<mejorJugada.rankingJugada())
 				mejorJugada=jug;
-			else if () // falta el caso en el que las cartas tienen el mismo ranking
-		}				// si no me eequivoco pasa el que es mano
+			else if (mejorJugada.rankingJugada()==jug.rankingJugada()&&jug.getJugador().getUsuario().getApodo()==jugadorMano.getUsuario().getApodo()) {
+				mejorJugada=jug;
+			}
+		}	
 	}
 	public void jugarCarta (Carta carta, Jugador jugador) {
 		Jugada jugada= new Jugada(jugador, carta);
 		this.jugadas.add(jugada);
 	}
 	public BazaView getView() {
-		BazaView bazaView=new BazaView(idBaza,turno,jugadas);
+		BazaView bazaView=new BazaView(turno,jugadas);
 		return bazaView;
 	}
 

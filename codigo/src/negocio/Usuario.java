@@ -117,7 +117,7 @@ public class Usuario {
 	}
 	public void agregarPartida( boolean ganada, int puntos) {
 		this.partidasJugadas++;
-		this.puntos=this.puntos+puntos;
+		this.puntos+=puntos;
 		if (ganada)
 			this.partidasGanadas++;
 		this.calcularCategoria();
@@ -135,7 +135,7 @@ public class Usuario {
 		//cerrar partidas?
 	}
 	public UsuarioView getView() {
-		UsuarioView usuarioView=new UsuarioView(apodo, mail, puntos, idUsuario, categoria, partidasJugadas, partidasGanadas, online, promedio, nroRanking);
+		UsuarioView usuarioView=new UsuarioView(apodo, mail, puntos, categoria, partidasJugadas, partidasGanadas, online, promedio, nroRanking);
 		return usuarioView;
 	}
 	public void save() {

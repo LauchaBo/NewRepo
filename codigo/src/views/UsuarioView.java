@@ -4,7 +4,6 @@ public class UsuarioView {
 	private String apodo;
 	private String mail;
 	private int puntos;
-	private int idUsuario;
 	private String categoria;
 	private int partidasJugadas;
 	private int partidasGanadas;
@@ -14,11 +13,10 @@ public class UsuarioView {
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//
 	//--------------------------------------------------------------------------------------------------//
-	public UsuarioView(String apodo,String mail, int puntos, int idUsuario, String categoria, int partidasJugadas,int partidasGanadas,boolean online, float promedio, int ranking) {
+	public UsuarioView(String apodo,String mail, int puntos, String categoria, int partidasJugadas,int partidasGanadas,boolean online, float promedio, int ranking) {
 		this.apodo=apodo;
 		this.mail=mail;
 		this.puntos=puntos;
-		this.idUsuario=idUsuario;
 		this.categoria=categoria;
 		this.partidasJugadas=partidasJugadas;
 		this.partidasGanadas=partidasGanadas;
@@ -39,9 +37,6 @@ public class UsuarioView {
 	}
 	public int getPuntos() {
 		return this.puntos;	
-	}
-	public int getIdUsuario() {
-		return this.idUsuario;
 	}
 	public String getCategoria() {
 		return this.categoria;
