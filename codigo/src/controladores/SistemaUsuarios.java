@@ -20,7 +20,7 @@ public class SistemaUsuarios {
 	}
 	
 	public void altaUsuario(String apodo, String mail, String password, String password2) {
-		if (password == password2) {
+		if (password == password2 && buscarUsuario(apodo) == null) {
 			Usuario user = new Usuario(apodo, mail, password);
 			usuarios.add(user);
 			user.save();
