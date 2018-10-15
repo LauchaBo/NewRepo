@@ -7,7 +7,6 @@ import views.MazoView;
 public class Mazo {
 	private ArrayList<Carta> cartasMazo;
 	private int cantidad;
-	
 
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//

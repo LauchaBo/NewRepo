@@ -21,7 +21,7 @@ public class Jugador {
 	public void setMano(CartasEnMano mano) {
 		this.mano = mano;
 	}
-	public Usuario getJugador() {
+	public Usuario getUsuario() {
 		return jugador;
 	}
 	public void setJugador(Usuario jugador) {

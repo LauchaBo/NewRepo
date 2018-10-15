@@ -5,23 +5,18 @@ import java.util.ArrayList;
 import negocio.Jugada;
 
 public class BazaView {
-	private int idBaza;
 	private int turno;
 	private ArrayList<JugadaView> jugadas;
 	
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//												//
 	//--------------------------------------------------------------------------------------------------//
-	public BazaView(int idBaza, int turno, ArrayList<Jugada> jugadas) {
-		this.idBaza=idBaza;
+	public BazaView( int turno, ArrayList<Jugada> jugadas) {
 		this.turno=turno;
 		for(Jugada jugada:jugadas) {
 			JugadaView jv=jugada.getView();
 			this.jugadas.add(jv);
 		}
-	}
-	public int getIdBaza() {
-		return idBaza;
 	}
 	public int getTurno() {
 		return turno;
