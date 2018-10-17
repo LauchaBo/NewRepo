@@ -13,6 +13,7 @@ public class Usuario {
 	private boolean online;
 	private float promedio;
 	private int nroRanking;
+	private boolean activo;
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//
 	//--------------------------------------------------------------------------------------------------//
@@ -26,9 +27,16 @@ public class Usuario {
 			this.promedio=0;
 			this.online=true;
 			this.categoria="novato";
+			this.activo = true;
 			//this.idUsuario=
 			//this.nroRanking=
 			
+		}
+	public boolean isActivo() {
+			return activo;
+		}
+		public void setActivo(boolean activo) {
+			this.activo = activo;
 		}
 	//--------------------------------------------------------------------------------------------------//
 	//										//METODOS//													//
@@ -111,6 +119,11 @@ public class Usuario {
 	public boolean sosUsuario(int idUsuario) {
 		return (this.idUsuario==idUsuario);
 	}
+	
+	public boolean sosUsuario(String apodo) {
+		return (this.apodo == apodo);
+	}
+	
 	public float calcularPromedio() {
 		//
 		return 0;

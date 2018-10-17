@@ -15,7 +15,7 @@ public class Baza {
 
 	public Baza() {
 		//this.idBaza=
-		//this.turno=
+		this.turno=0;
 		this.setJugadas(new ArrayList<Jugada>());
 	}
 
@@ -48,7 +48,7 @@ public class Baza {
 	}
 	
 	public void calcularEnvido() {
-		//
+		
 	}
 	public void calcularGanador(Jugador jugadorMano) {
 		Jugada mejorJugada = null; 
@@ -60,7 +60,7 @@ public class Baza {
 			else if (mejorJugada.rankingJugada()==jug.rankingJugada()&&jug.getJugador().getUsuario().getApodo()==jugadorMano.getUsuario().getApodo()) {
 				mejorJugada=jug;
 			}
-		}	
+		}
 	}
 	public void jugarCarta (Carta carta, Jugador jugador) {
 		Jugada jugada= new Jugada(jugador, carta);
