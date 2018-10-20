@@ -32,4 +32,44 @@ public class JuegoView {
 		this.tipo = tipo;
 		this.terminada = terminada;	
 	}
+
+	public ArrayList<JugadorView> getJugadores() {
+		return jugadores;
+	}
+
+	public ArrayList<PartidaView> getPartidas() {
+		return partidas;
+	}
+
+	public PartidaView getPartidaActiva() {
+		return partidaActiva;
+	}
+
+	public ParejaView getParejaA() {
+		return parejaA;
+	}
+
+	public ParejaView getParejaB() {
+		return parejaB;
+	}
+
+	public String getCategoriaParA() {
+		return categoriaParA;
+	}
+
+	public String getCategoriaParB() {
+		return categoriaParB;
+	}
+
+	public Date getFecha() {
+		return fecha;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public boolean isTerminada() {
+		return terminada;
+	}
 }
