@@ -109,11 +109,11 @@ public class Usuario {
 	}
 	
 	public void calcularCategoria() {
-		if (this.partidasJugadas>100&& this.puntos>500&&this.promedio>=5)
+		if (this.partidasJugadas>100 && this.partidasJugadas<=500 && this.puntos>500 && this.puntos<=3000 && this.promedio>=5 && this.promedio<6)
 			this.categoria="calificado";
-		else if (this.partidasJugadas>500&& this.puntos>3000 &&this.promedio>=6)
+		else if (this.partidasJugadas>500 && this.partidasJugadas<=1000 && this.puntos>3000 && this.puntos<=8000 && this.promedio>=6 && this.promedio<8)
 			this.categoria="experto";
-		else if (this.partidasJugadas>1000 && this.puntos>8000 &&this.promedio>=8)
+		else if (this.partidasJugadas>1000 && this.puntos>8000 && this.promedio>=8)
 			this.categoria="master";
 	}
 	public boolean sosUsuario(int idUsuario) {

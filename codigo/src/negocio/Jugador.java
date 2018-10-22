@@ -4,13 +4,16 @@ import views.JugadorView;
 
 public class Jugador {
 	private CartasEnMano mano;
-	private Usuario jugador;
+	private Usuario usuario;
 	private int orden;
 	
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//
 	//--------------------------------------------------------------------------------------------------//
-
+	
+	public Jugador(Usuario usuario) {
+		this.usuario = usuario;
+	}
 	
 	//--------------------------------------------------------------------------------------------------//
 	//										//Metodos//													//
@@ -22,10 +25,10 @@ public class Jugador {
 		this.mano = mano;
 	}
 	public Usuario getUsuario() {
-		return jugador;
+		return usuario;
 	}
 	public void setJugador(Usuario jugador) {
-		this.jugador = jugador;
+		this.usuario = jugador;
 	}
 	public int getOrden() {
 		return orden;
@@ -37,7 +40,7 @@ public class Jugador {
 		
 	}
 	public JugadorView getView() {
-		JugadorView jugadorView=new JugadorView(mano,jugador,orden);
+		JugadorView jugadorView=new JugadorView(mano, usuario, orden);
 		return jugadorView;
 	}
 	
