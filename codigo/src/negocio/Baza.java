@@ -16,7 +16,7 @@ public class Baza {
 	public Baza() {
 		//this.idBaza=
 		this.turno=0;
-		this.setJugadas(new ArrayList<Jugada>());
+		this.jugadas=new ArrayList<Jugada>();
 	}
 
 	//--------------------------------------------------------------------------------------------------//

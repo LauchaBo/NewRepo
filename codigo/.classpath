@@ -17,7 +17,5 @@
 	<classpathentry kind="lib" path="/Users/facundomontesanto/Downloads/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre8.jar"/>
 	<classpathentry kind="lib" path="/Users/facundomontesanto/Downloads/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre10.jar"/>
 	<classpathentry kind="src" path="/Repositorio"/>
-	<classpathentry kind="lib" path="/Repositorio/src"/>
-	<classpathentry kind="lib" path="/Repositorio/bin/interfaceRemota"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -2,7 +2,6 @@ package dtos;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-
 import negocio.Carta;
 
 public class MazoDto implements Serializable{

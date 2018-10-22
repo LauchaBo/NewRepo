@@ -4,15 +4,14 @@ import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import excepciones.ComunicacionException;
-import interfaceRemota.intRemota;
-
+import interfaces.iRemota;
 public class businessDelegate {
 	
-		private intRemota ir;
+		private iRemota ir;
 		
 		public businessDelegate() throws ComunicacionException{
 			try {
-				ir = (intRemota) Naming.lookup(""); //PONER LA URL DEL SERVER ENTRE COMILLAS
+				ir = (iRemota) Naming.lookup(""); //PONER LA URL DEL SERVER ENTRE COMILLAS
 			} catch (MalformedURLException e) {
 				throw new ComunicacionException("La direccion especificada no es correcta");
 			} catch (RemoteException e) {
