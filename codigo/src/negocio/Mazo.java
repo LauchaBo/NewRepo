@@ -2,7 +2,7 @@ package negocio;
 
 import java.util.ArrayList;
 
-import views.MazoView;
+import dtos.MazoDto;
 
 public class Mazo {
 	private ArrayList<Carta> cartasMazo;
@@ -35,8 +35,8 @@ public class Mazo {
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
-	public MazoView getView() {
-		MazoView mazoView=new MazoView(cartasMazo, cantidad);
+	public MazoDto getView() {
+		MazoDto mazoView=new MazoDto(cartasMazo, cantidad);
 		return mazoView;
 	}
 

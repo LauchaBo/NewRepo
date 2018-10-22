@@ -1,6 +1,6 @@
 package negocio;
 
-import views.JugadaView;
+import dtos.JugadaDto;
 
 public class Jugada {
 	private Carta carta;
@@ -36,8 +36,8 @@ public class Jugada {
 	public int rankingJugada() {
 		return this.carta.getRanking();
 	}
-	public JugadaView getView() {
-		JugadaView jugadaView=new JugadaView(carta,jugador);
+	public JugadaDto getView() {
+		JugadaDto jugadaView=new JugadaDto(carta,jugador);
 		return jugadaView;
 	}
 	

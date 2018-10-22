@@ -1,17 +1,21 @@
-package views;
+package dtos;
+
+import java.io.Serializable;
 
 import negocio.CartasEnMano;
 import negocio.Usuario;
 
-public class JugadorView {
-	private UsuarioView jugador;
-	private CartasEnManoView mano;
+public class JugadorDto implements Serializable {
+	
+	private static final long serialVersionUID = -4889385566057424439L;
+	private UsuarioDto jugador;
+	private CartasEnManoDto mano;
 	private int orden;
 	
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//
 	//--------------------------------------------------------------------------------------------------//
-	public JugadorView(CartasEnMano mano, Usuario jugador, int orden) {
+	public JugadorDto(CartasEnMano mano, Usuario jugador, int orden) {
 		this.jugador=jugador.getView();
 		this.mano=mano.getView();
 		this.orden=orden;
@@ -19,14 +23,23 @@ public class JugadorView {
 	//--------------------------------------------------------------------------------------------------//
 	//										//Metodos//													//
 	//--------------------------------------------------------------------------------------------------//
-	public UsuarioView getJugador() {
+	public UsuarioDto getJugador() {
 		return jugador;
 	}
-	public CartasEnManoView getCartasManoView() {
+	public CartasEnManoDto getCartasManoView() {
 		return mano;
 	}
 	public int getOrden() {
 		return orden;
+	}
+	public void setJugador(UsuarioDto jugador) {
+		this.jugador = jugador;
+	}
+	public void setMano(CartasEnManoDto mano) {
+		this.mano = mano;
+	}
+	public void setOrden(int orden) {
+		this.orden = orden;
 	}
 
 }

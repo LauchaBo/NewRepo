@@ -2,7 +2,7 @@ package negocio;
 
 import java.util.ArrayList;
 
-import views.BazaView;
+import dtos.BazaDto;
 
 public class Baza {
 	private int idBaza;
@@ -66,8 +66,8 @@ public class Baza {
 		Jugada jugada= new Jugada(jugador, carta);
 		this.jugadas.add(jugada);
 	}
-	public BazaView getView() {
-		BazaView bazaView=new BazaView(turno,jugadas);
+	public BazaDto getView() {
+		BazaDto bazaView=new BazaDto(turno,jugadas);
 		return bazaView;
 	}
 

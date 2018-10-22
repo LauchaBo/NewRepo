@@ -1,17 +1,20 @@
 package negocio;
-import views.UsuarioView;
+import dtos.UsuarioDto;
+
 
 public class Usuario {
+	
+	private int idUsuario;
 	private String apodo;
 	private String mail;
 	private int puntos;
-	private int idUsuario;
 	private String password;
 	private String categoria;
 	private int partidasJugadas;
 	private int partidasGanadas;
 	private boolean online;
 	private float promedio;
+	//columna??
 	private int nroRanking;
 	private boolean activo;
 	//--------------------------------------------------------------------------------------------------//
@@ -147,8 +150,8 @@ public class Usuario {
 		this.online=false;
 		//cerrar partidas?
 	}
-	public UsuarioView getView() {
-		UsuarioView usuarioView=new UsuarioView(apodo, mail, puntos, categoria, partidasJugadas, partidasGanadas, online, promedio, nroRanking);
+	public UsuarioDto getView() {
+		UsuarioDto usuarioView=new UsuarioDto(apodo, mail, puntos, categoria, partidasJugadas, partidasGanadas, online, promedio, nroRanking);
 		return usuarioView;
 	}
 	public void save() {

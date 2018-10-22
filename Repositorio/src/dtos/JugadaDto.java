@@ -1,16 +1,23 @@
-package views;
+package dtos;
+
+import java.io.Serializable;
 
 import negocio.Carta;
 import negocio.Jugador;
 
-public class JugadaView {
-	private CartaView carta;
-	private JugadorView jugador;
+public class JugadaDto implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9021670569152809041L;
+	private CartaDto carta;
+	private JugadorDto jugador;
 	
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//
 	//--------------------------------------------------------------------------------------------------//
-	public JugadaView(Carta carta, Jugador jugador) {
+	public JugadaDto(Carta carta, Jugador jugador) {
 		this.carta=carta.getView();
 		this.jugador=jugador.getView();
 	}
@@ -19,10 +26,18 @@ public class JugadaView {
 	//										//Metodos//													//
 	//--------------------------------------------------------------------------------------------------//
 	
-	public CartaView getCartaJugada() {
+	public CartaDto getCartaJugada() {
 		return carta;
 	}
-	public JugadorView getJugadorJugada() {
+	public JugadorDto getJugadorJugada() {
 		return jugador;
+	}
+
+	public void setCarta(CartaDto carta) {
+		this.carta = carta;
+	}
+
+	public void setJugador(JugadorDto jugador) {
+		this.jugador = jugador;
 	}
 }

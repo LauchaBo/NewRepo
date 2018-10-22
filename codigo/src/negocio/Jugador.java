@@ -1,11 +1,12 @@
 package negocio;
 
-import views.JugadorView;
+import dtos.JugadorDto;
 
 public class Jugador {
 	private CartasEnMano mano;
 	private Usuario jugador;
 	private int orden;
+	private int puntosJuego;
 	
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//
@@ -36,9 +37,15 @@ public class Jugador {
 	public void terminarTurno() {
 		
 	}
-	public JugadorView getView() {
-		JugadorView jugadorView=new JugadorView(mano,jugador,orden);
+	public JugadorDto getView() {
+		JugadorDto jugadorView=new JugadorDto(mano,jugador,orden);
 		return jugadorView;
+	}
+	public int getPuntosJuego() {
+		return puntosJuego;
+	}
+	public void setPuntosJuego(int puntosJuego) {
+		this.puntosJuego = puntosJuego;
 	}
 	
 }

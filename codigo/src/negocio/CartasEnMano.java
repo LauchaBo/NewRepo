@@ -2,7 +2,7 @@ package negocio;
 
 import java.util.ArrayList;
 
-import views.CartasEnManoView;
+import dtos.CartasEnManoDto;
 
 public class CartasEnMano {
 	private ArrayList<Carta> cartasEnMano;
@@ -35,8 +35,8 @@ public class CartasEnMano {
 	public void jugarCarta(int numero, String palo){
 		//---------//
 	}
-	public CartasEnManoView getView() {
-		CartasEnManoView cartasEnManoView=new CartasEnManoView(cartasEnMano,cantCartas,envido);
+	public CartasEnManoDto getView() {
+		CartasEnManoDto cartasEnManoView=new CartasEnManoDto(cartasEnMano,cantCartas,envido);
 		return cartasEnManoView;
 	}
 

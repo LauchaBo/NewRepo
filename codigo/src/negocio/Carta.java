@@ -1,6 +1,6 @@
 package negocio;
 
-import views.CartaView;
+import dtos.CartaDto;
 
 public class Carta {
 	private int numero;
@@ -48,8 +48,8 @@ public class Carta {
 	public void tomarCarta() {
 		this.disponible=false;
 	}
-	public CartaView getView () {
-		CartaView view=new CartaView(this.numero,this.palo,this.ranking,this.disponible);
+	public CartaDto getView () {
+		CartaDto view=new CartaDto(this.numero,this.palo,this.ranking,this.disponible);
 		return view;
 	}
 

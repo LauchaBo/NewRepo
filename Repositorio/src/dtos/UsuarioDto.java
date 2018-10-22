@@ -1,6 +1,11 @@
-package views;
+package dtos;
 
-public class UsuarioView {
+import java.io.Serializable;
+
+public class UsuarioDto implements Serializable {
+	
+	private static final long serialVersionUID = -392743160688985948L;
+
 	private String apodo;
 	private String mail;
 	private int puntos;
@@ -13,7 +18,7 @@ public class UsuarioView {
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//
 	//--------------------------------------------------------------------------------------------------//
-	public UsuarioView(String apodo,String mail, int puntos, String categoria, int partidasJugadas,int partidasGanadas,boolean online, float promedio, int ranking) {
+	public UsuarioDto(String apodo,String mail, int puntos, String categoria, int partidasJugadas,int partidasGanadas,boolean online, float promedio, int ranking) {
 		this.apodo=apodo;
 		this.mail=mail;
 		this.puntos=puntos;
@@ -55,6 +60,50 @@ public class UsuarioView {
 	}
 	public int getRanking() {
 		return this.nroRanking;
+	}
+
+	public boolean isOnline() {
+		return online;
+	}
+
+	public void setOnline(boolean online) {
+		this.online = online;
+	}
+
+	public int getNroRanking() {
+		return nroRanking;
+	}
+
+	public void setNroRanking(int nroRanking) {
+		this.nroRanking = nroRanking;
+	}
+
+	public void setApodo(String apodo) {
+		this.apodo = apodo;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	public void setPuntos(int puntos) {
+		this.puntos = puntos;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
+	public void setPartidasJugadas(int partidasJugadas) {
+		this.partidasJugadas = partidasJugadas;
+	}
+
+	public void setPartidasGanadas(int partidasGanadas) {
+		this.partidasGanadas = partidasGanadas;
+	}
+
+	public void setPromedio(float promedio) {
+		this.promedio = promedio;
 	}
 
 }

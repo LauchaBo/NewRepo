@@ -1,6 +1,10 @@
-package views;
+package dtos;
 
-public class CartaView {
+import java.io.Serializable;
+
+public class CartaDto  implements Serializable{
+	
+	private static final long serialVersionUID = -8246060271849321893L;
 	private int numero;
 	private String palo;
 	private boolean disponible;
@@ -11,7 +15,7 @@ public class CartaView {
 	//--------------------------------------------------------------------------------------------------//
 
 	
-	public CartaView(int numero, String palo, int ranking, boolean disponible) {
+	public CartaDto(int numero, String palo, int ranking, boolean disponible) {
 		this.numero=numero;
 		this.palo=palo;
 		this.ranking=ranking;
@@ -33,6 +37,22 @@ public class CartaView {
 	}
 	public int getRanking() {
 		return this.ranking;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public void setPalo(String palo) {
+		this.palo = palo;
+	}
+
+	public void setDisponible(boolean disponible) {
+		this.disponible = disponible;
+	}
+
+	public void setRanking(int ranking) {
+		this.ranking = ranking;
 	}
 	
 }
