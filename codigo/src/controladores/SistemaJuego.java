@@ -23,8 +23,8 @@ public class SistemaJuego {
 		return instance;
 	}
 	
-	public void crearJuego(String tipo, ArrayList<Pareja> parejas) {
-		Juego juego = new Juego(tipo, parejas);
+	public void crearJuego(String tipo, Pareja parejaA, Pareja parejaB) {
+		Juego juego = new Juego(tipo, parejaA, parejaB);
 		juegos.add(juego);
 		juego.save();
 	}
