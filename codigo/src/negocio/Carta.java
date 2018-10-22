@@ -5,7 +5,6 @@ import views.CartaView;
 public class Carta {
 	private int numero;
 	private String palo;
-	private boolean disponible;
 	private int ranking;
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//
@@ -14,8 +13,7 @@ public class Carta {
 		this.numero=nro;
 		this.palo=palo;
 		//sacar de la DB
-//		this.ranking=ranking;
-		this.disponible=true;
+		//this.ranking=ranking;
 	}
 	
 	//--------------------------------------------------------------------------------------------------//
@@ -25,33 +23,29 @@ public class Carta {
 	public int getNumero() {
 		return numero;
 	}
+	
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
+	
 	public String getTurno() {
 		return palo;
 	}
+	
 	public void setTurno(String palo) {
 		this.palo = palo;
 	}
+	
 	public int getRanking() {
 		return ranking;
 	}
+	
 	public void setRanking(int ranking) {
 		this.ranking = ranking;
 	}
-	public boolean isDisponible() {
-		return disponible;
-	}
-	public void setDisponible(boolean disponible) {
-		this.disponible = disponible;
-	}
-	public void tomarCarta() {
-		this.disponible=false;
-	}
+	
 	public CartaView getView () {
 		CartaView view=new CartaView(this.numero,this.palo,this.ranking,this.disponible);
 		return view;
 	}
-
 }

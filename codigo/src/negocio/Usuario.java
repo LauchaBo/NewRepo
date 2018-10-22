@@ -14,96 +14,123 @@ public class Usuario {
 	private float promedio;
 	private int nroRanking;
 	private boolean activo;
+	
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//
 	//--------------------------------------------------------------------------------------------------//
-		public Usuario (String apodo, String mail, String password) {
-			this.apodo=apodo;
-			this.mail=mail;
-			this.password=password;
-			this.puntos=0;
-			this.partidasGanadas=0;
-			this.partidasJugadas=0;
-			this.promedio=0;
-			this.online=true;
-			this.categoria="novato";
-			this.activo = true;
-			//this.idUsuario=
-			//this.nroRanking=
-			
-		}
-	public boolean isActivo() {
-			return activo;
-		}
-		public void setActivo(boolean activo) {
-			this.activo = activo;
-		}
+	
+	public Usuario (String apodo, String mail, String password) {
+		this.apodo=apodo;
+		this.mail=mail;
+		this.password=password;
+		this.puntos=0;
+		this.partidasGanadas=0;
+		this.partidasJugadas=0;
+		this.promedio=0;
+		this.online=true;
+		this.categoria="novato";
+		this.activo = true;
+		//this.idUsuario=
+		//this.nroRanking=
+		
+	}
+	
 	//--------------------------------------------------------------------------------------------------//
 	//										//METODOS//													//
 	//--------------------------------------------------------------------------------------------------//
+	
+	public boolean isActivo() {
+		return activo;
+	}
+	
+	public void setActivo(boolean activo) {
+		this.activo = activo;
+	}
+	
 	public String getApodo() {
 		return apodo;
 	}
+	
 	public void setApodo(String apodo) {
 		this.apodo = apodo;
 	}
+	
 	public String getMail() {
 		return mail;
 	}
+	
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
+	
 	public int getIdUsuario() {
 		return idUsuario;
 	}
+	
 	public void setIdUsuario(int idUsuario) {
 		this.idUsuario = idUsuario;
 	}
+	
 	public int getPuntos() {
 		return puntos;
 	}
+	
 	public void setPuntos(int puntos) {
 		this.puntos = puntos;
 	}
+	
 	public String getPassword() {
 		return password;
 	}
+	
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
 	public String getCategoria() {
 		return categoria;
 	}
+	
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+	
 	public int getPartidasJugadas() {
 		return partidasJugadas;
 	}
+	
 	public void setPartidasJugadas(int partidasJugadas) {
 		this.partidasJugadas = partidasJugadas;
 	}
+	
 	public int getPartidasGanadas() {
 		return partidasGanadas;
 	}
+	
 	public void setPartidasGanadas(int partidasGanadas) {
 		this.partidasGanadas = partidasGanadas;
 	}
+	
 	public boolean isOnline() {
 		return online;
 	}
+	
 	public void setOnline(boolean online) {
 		this.online = online;
 	}
+	
 	public int getNroRanking() {
 		return nroRanking;
 	}
+	
 	public void setNroRanking(int nroRanking) {
 		this.nroRanking = nroRanking;
 	}
+	
 	public float getPromedio() {
 		return promedio;
 	}
+	
 	public void setPromedio(float promedio) {
 		this.promedio = promedio;
 	}
@@ -116,6 +143,7 @@ public class Usuario {
 		else if (this.partidasJugadas>1000 && this.puntos>8000 && this.promedio>=8)
 			this.categoria="master";
 	}
+	
 	public boolean sosUsuario(int idUsuario) {
 		return (this.idUsuario==idUsuario);
 	}
@@ -128,13 +156,15 @@ public class Usuario {
 		//
 		return 0;
 	}
+	
 	public void agregarPartida( boolean ganada, int puntos) {
 		this.partidasJugadas++;
 		this.puntos+=puntos;
 		if (ganada)
 			this.partidasGanadas++;
 		this.calcularCategoria();
-	}
+	 }
+	
 	public boolean logIn(String apodo,String password) {
 		if (this.apodo==apodo && this.password==password) {
 			this.online=true;
@@ -143,20 +173,25 @@ public class Usuario {
 		else
 			return false;
 	}
+	
 	public void logOut() {
 		this.online=false;
 		//cerrar partidas?
 	}
+	
 	public UsuarioView getView() {
 		UsuarioView usuarioView=new UsuarioView(apodo, mail, puntos, categoria, partidasJugadas, partidasGanadas, online, promedio, nroRanking);
 		return usuarioView;
 	}
+	
 	public void save() {
 		
 	}
+	
 	public void update() {
 		
 	}
+	
 	public void delete() {
 		
 	}
