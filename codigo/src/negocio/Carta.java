@@ -10,10 +10,11 @@ public class Carta {
 	//--------------------------------------------------------------------------------------------------//
 	//										//Constructor//													//
 	//--------------------------------------------------------------------------------------------------//
-	public Carta(int nro, String palo, int ranking) {
+	public Carta(int nro, String palo) {
 		this.numero=nro;
 		this.palo=palo;
-		this.ranking=ranking;
+		//sacar de la DB
+//		this.ranking=ranking;
 		this.disponible=true;
 	}
 	
