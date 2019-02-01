@@ -18,6 +18,10 @@ public class Jugador {
 	//--------------------------------------------------------------------------------------------------//
 	//										//Metodos//													//
 	//--------------------------------------------------------------------------------------------------//
+	
+	public void setCartaMano(Carta carta) {
+		this.mano.setCartaMano(carta);
+	}
 	public CartasEnMano getMano() {
 		return mano;
 	}

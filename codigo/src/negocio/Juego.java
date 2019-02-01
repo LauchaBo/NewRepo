@@ -31,11 +31,16 @@ public class Juego {
 		this.tipo = tipo;
 		this.terminada = false;
 		
-		for(jug : parejaA.getJugadores()) {
+		int orden = 0;
+		for(Jugador jug : parejaA.getJugadores()) {
+			jug.setOrden(orden);
 			jugadores.add(jug);
+			orden++;
 		}
-		for(jug : parejaB.getJugadores()) {
+		for(Jugador jug : parejaB.getJugadores()) {
+			jug.setOrden(orden);
 			jugadores.add(jug);
+			orden++;
 		}		
 	}
 	
@@ -45,7 +50,7 @@ public class Juego {
 	
 	public void cerrarPartida(Pareja ganadora, int puntos) {
 		terminada = true;
-		ganadora.agregarPartida()
+		ganadora.agregarPartida();
 	}
 	
 	public void verificarGanador() {

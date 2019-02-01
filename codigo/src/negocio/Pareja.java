@@ -2,6 +2,8 @@ package negocio;
 
 import java.util.ArrayList;
 
+import views.ParejaView;
+
 public class Pareja {
 	private int idPareja;
 	private ArrayList<Jugador> jugadores;
@@ -27,6 +29,11 @@ public class Pareja {
 		for(Jugador jug : jugadores)
 			if(jug.getUsuario().getCategoria() == "master")
 				this.categoria = "master";
+	}
+	
+	public ParejaView getView() {
+		ParejaView parejaView = new ParejaView(jugadores, categoria);
+		return parejaView;
 	}
 
 	public int getIdPareja() {
